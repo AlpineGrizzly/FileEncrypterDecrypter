@@ -7,24 +7,21 @@ public class mainTest {
 
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
-		
-		/***
-		 * Here I have newFile, with the method findFile. This will make sure the file the user is asking to be 
-		 * encrypted or decrypted exists.
-		 */
-		File newFile = findFile();
-		
-		//Here is key with the getKey method, which will ask for a key from the user, but only accept it if it
-		//is an integer value, otherwise it will keep asking for a value til one suffices.
-		int key = getKey();
-		
 		/*
 		 * This is the main part of the main method that will keep asking for a menu option until the user
 		 * quits the program.
 		 */
 		while(true) {
-			//This is the getMenu method that will ask the user for a choice, being either 1, 2, or 3.
-			//And will only return a value when one of these 3 choices are picked
+			/***
+			 * Here I have newFile, with the method findFile. This will make sure the file the user is asking to be 
+			 * encrypted or decrypted exists.
+			 */
+		File newFile = findFile();
+		//Here is key with the getKey method, which will ask for a key from the user, but only accept it if it
+		//is an integer value, otherwise it will keep asking for a value til one suffices.
+		int key = getKey();
+		//This is the getMenu method that will ask the user for a choice, being either 1, 2, or 3.
+		//And will only return a value when one of these 3 choices are picked
 		int pick = getMenuOption();
 		if(pick == 3) {
 			//If the user picks the 3rd option, quit, break the loop and end the program.
